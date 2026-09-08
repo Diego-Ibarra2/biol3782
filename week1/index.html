@@ -7916,9 +7916,13 @@ need to have a Posit Free Cloud account, or Posit Student Cloud Account).</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="RStudio">RStudio<a class="anchor-link" href="#RStudio">¶</a></h1><img alt="No description has been provided for this image" src="../media/RStudio_logo.png" width="150px"/>
 <p>Most people do "coding" (in any language) using an <strong>"Integrated Development Environment" (IDE)</strong>, which are programs designed to make "coding" easier. <strong>IDE's</strong> make it easier to run your code, get help, manage multiple projects and files, color-code your code as you write it, etc. <strong>IDE's</strong> are like a swiss-army-knife for coding. Many <strong>IDE's</strong> are free. Take a look at <a href="https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments">this list of IDE's</a></p>
-<p><code>RStudio</code> is a free <strong>IDE</strong> especially designed to work with R. <code>RStudio</code> was also pre-installed in all Lab computers; however, if you want to follow along in your own laptop, you can install <code>RStudio</code> directly from <a href="https://rstudio.com/">https://rstudio.com/</a></p>
+<p><code>RStudio</code> is a free <strong>IDE</strong> especially designed to work with R. In this course, we'll be using <code>RStudio</code> istalled in the servers of <strong>Posit Cloud</strong>, which you can access via your own laptop's browers (e.g. Safari, Chrome, etc); however, if you want to follow along in your own laptop, you can install <code>RStudio</code> directly from <a href="https://rstudio.com/">https://rstudio.com/</a></p>
 <ul>
-<li>To open <code>RStudio</code>, search in the taskbar for "RStudio", the program looks as follows:</li>
+<li>To open <code>RStudio</code>...<ol>
+<li>In your browser, go to <a href="%27https://posit.cloud/%27">Posit Cloud</a> and Login.</li>
+<li>Or if you installed RStudio in your laption, search in the taskbar for "RStudio", the program looks as follows:</li>
+</ol>
+</li>
 </ul>
 <br/>
 <img alt="No description has been provided for this image" src="../media/RStudio.png" width="800px"/>
@@ -7937,7 +7941,13 @@ need to have a Posit Free Cloud account, or Posit Student Cloud Account).</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="RStudio's-%22Console%22">RStudio's "Console"<a class="anchor-link" href="#RStudio's-%22Console%22">¶</a></h2><img alt="No description has been provided for this image" src="../media/RStudio_console.png" width="600px"/>
 <br/>
-<p>The <span class="console"></span> is a live instance of R. It is the most direct way to connect your computer's <strong>memory</strong> (i.e. where R is loaded) to your <strong>screen</strong>. This is the place where R will display error messages, warnings, and some code output. The <span class="console"></span> is also where you can quickly interact with R by writing code and then clicking [Enter] When you click [Enter], anything you wrote on the <span class="console"></span> will be loaded to memory and executed immediately. Let's try it:</p>
+<p>The <span class="console"></span> is a live instance of R. It is the most direct way to connect your computer's <strong>memory</strong> (i.e. where R is loaded) to your <strong>screen</strong>. This is the place where R will display error messages, warnings, and some code output. The <span class="console"></span> is also where you can quickly interact with R by writing code and then clicking [Enter] When you click [Enter], anything you wrote on the <span class="console"></span> will be loaded to memory and executed immediately.</p>
+<p>When we want you to copy text into the <span class="console"></span>... we may tell you to do so using the following line...
+<br/></p>
+<div class="use_console"></div>
+<br/>
+<br/>
+<p>Let's try it:</p>
 </div>
 </div>
 </div>
@@ -7958,7 +7968,7 @@ need to have a Posit Free Cloud account, or Posit Student Cloud Account).</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="s">'hello world!'</span><span class="p">)</span>
@@ -8189,6 +8199,13 @@ need to have a Posit Free Cloud account, or Posit Student Cloud Account).</p>
 <p>The <span class="editor"></span> is the space where you write your code so that you can execute it later. The <span class="editor"></span> is shown below inside the green box.</p>
 <img alt="No description has been provided for this image" src="./RStudio_editor.png" width="800px"/>
 <p>The <span class="editor"></span> is just a text editor like Notepad (in Windows) or TextEdit (in Mac). However, note that RStudio's <span class="editor"></span> color-codes your text so that it can be read with ease. It will also perform some basic quality control and will tell you if you made a mistake (more on this later).</p>
+<br/>
+<br/>
+When we want you to copy text into the <span class="editor"></span>... we may tell you to do so using the following line...
+<br/>
+<div class="use_editor"></div>
+<br/>
+<br/>
 </div>
 </div>
 </div>
@@ -8448,8 +8465,8 @@ need to have a Posit Free Cloud account, or Posit Student Cloud Account).</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Saving-your-code">Saving your code<a class="anchor-link" href="#Saving-your-code">¶</a></h2><p>To save your file to your hard-drive, simply click the <strong>"Save"</strong> button on the Editor (it looks like a floppy disk). You can name your file anything you want, but the extension will be automatically set as <code>.R</code>, which is the default extension for R files.</p>
-<p><span class="note"></span> After you write some code in the <em><strong>Editor</strong></em>, clicking the "save" button technically transfers code from the <strong>Screen</strong> (i.e. the Editor) into a file in your <strong>hard-drive</strong>.</p>
+<h2 id="Saving-your-code">Saving your code<a class="anchor-link" href="#Saving-your-code">¶</a></h2><p>To save your file to your Posit CLod Account, simply click the <strong>"Save"</strong> button on the Editor (it looks like a floppy disk). You can name your file anything you want, but the extension will be automatically set as <code>.R</code>, which is the default extension for R files.</p>
+<p><span class="note"></span> After you write some code in the <em><strong>Editor</strong></em>, clicking the "save" button technically transfers code from the <strong>Screen</strong> (i.e. the Editor) into a file in the <strong>hard-drive</strong> in the <em><strong>Posit Cloud</strong></em> remote computer.</p>
 </div>
 </div>
 </div>
@@ -8734,11 +8751,11 @@ need to have a Posit Free Cloud account, or Posit Student Cloud Account).</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Define buoy's URL</span>
-<span class="n">bouyURL</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"https://raw.githubusercontent.com/Diego-Ibarra/biol3782/main/week1/data/buoy_data.csv"</span><span class="w"> </span><span class="c1"># http://columbia.loboviz.com/ is down at the moment. Redirect to saved .csv file in course's repo</span>
+<span class="n">bouyURL</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"https://raw.githubusercontent.com/Diego-Ibarra2/biol3782/main/week1/data/buoy_data.csv"</span><span class="w"> </span><span class="c1"># http://columbia.loboviz.com/ is down at the moment. Redirect to saved .csv file in course's repo</span>
 
 <span class="c1"># Read data directly from buoy</span>
 <span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="n">bouyURL</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">","</span><span class="p">)</span>
@@ -9144,38 +9161,17 @@ ICRAASEBCv4DlMOUxkYGnU8AAAAASUVORK5CYII="/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">"ggplot2"</span><span class="p">)</span>
 <span class="nf">install.packages</span><span class="p">(</span><span class="s">"viridis"</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Warning message:
-"package 'ggplot2' is not available (for R version 3.6.1)"Warning message:
-"unable to access index for repository https://cran.r-project.org/bin/windows/contrib/3.6:
-  cannot open URL 'https://cran.r-project.org/bin/windows/contrib/3.6/PACKAGES'"also installing the dependencies 'viridisLite', 'gridExtra'
-
-Warning message:
-"unable to access index for repository https://cran.r-project.org/bin/windows/contrib/3.6:
-  cannot open URL 'https://cran.r-project.org/bin/windows/contrib/3.6/PACKAGES'"installing the source packages 'viridisLite', 'gridExtra', 'viridis'
-
-</pre>
 </div>
 </div>
 </div>
@@ -9197,7 +9193,7 @@ Warning message:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Import library</span>
@@ -9205,8 +9201,6 @@ Warning message:
 <span class="nf">library</span><span class="p">(</span><span class="n">viridis</span><span class="p">)</span>
 
 <span class="c1"># Define URL for OTN glider</span>
-<span class="c1">#URL = 'http://gliders.oceantrack.org/data/live/bond_sci_water_temp_live.csv'</span>
-<span class="c1">#bouyURL &lt;- "https://raw.githubusercontent.com/Diego-Ibarra/biol3782/main/week1/data/buoy_data.csv"</span>
 <span class="n">URL</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"https://raw.githubusercontent.com/Diego-Ibarra2/biol3782/main/week1/data/glider_data.csv"</span>
 
 <span class="c1"># Read data directly from buoy</span>
@@ -9235,7 +9229,12 @@ Warning message:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Loading required package: viridisLite
+<pre>Registered S3 methods overwritten by 'ggplot2':
+  method         from 
+  [.quosures     rlang
+  c.quosures     rlang
+  print.quosures rlang
+Loading required package: viridisLite
 </pre>
 </div>
 </div>
@@ -10549,13 +10548,11 @@ RU5ErkJggg=="/>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Define ERDDAP's URL</span>
-<span class="c1">#URL &lt;- "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplUKMO_OSTIAv20.csv?analysed_sst%5B(2020-12-22T12:00:00Z):1:(2020-12-22T12:00:00Z)%5D%5B(41.025):1:(52.025)%5D%5B(-67.975):1:(-54.675)%5D"</span>
 <span class="n">URL</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"https://raw.githubusercontent.com/Diego-Ibarra2/biol3782/main/week1/data/satellite_data2.csv"</span>
-
 
 <span class="c1"># Read data from ERDDAP</span>
 <span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">","</span><span class="p">,</span><span class="w"> </span><span class="n">skip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
