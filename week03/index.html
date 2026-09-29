@@ -7820,8 +7820,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div class="big_title">LAB 4: Plotting and basic data exploration</div>
-<p>BIOL3782: Scientific Computing for Biologists (Dalhousie University)</p>
+<h3 id="LAB-3:-Plotting-and-basic-data-exploration"><div class="big_title">LAB 3: Plotting and basic data exploration</div><a class="anchor-link" href="#LAB-3:-Plotting-and-basic-data-exploration">¶</a></h3><p>BIOL3782: Scientific Computing for Biologists (Dalhousie University)</p>
 <hr/>
 </div>
 </div>
@@ -7836,16 +7835,16 @@ a.anchor-link {
 <h1 id="Setup-of-workspace">Setup of workspace<a class="anchor-link" href="#Setup-of-workspace">¶</a></h1><p><span class="important"></span></p>
 <div class="lineerror">Some students are working on their own laptops (i.e. local physical computers), while others are working on POSIT Cloud. In most Labs, the instruccions will appear as if you are working in a local computer (e.g. your own laptop), but <b>if you are working on POSIT Cloud, you will need to adjust acordingly (i.e. save your work and upload your data to your posit project space).</b></div>
 <ul>
-<li><p>Create a <strong>folder</strong> on the "Desktop" and name it <span class="file">Lab4</span></p>
+<li><p>Create a <strong>folder</strong> on the "Desktop" and name it <span class="file">Lab3</span></p>
 </li>
-<li><p>From Brightspace, download the following files into your new folder <span class="file">Desktop\Lab4</span>:</p>
+<li><p>From Brightspace, download the following files into your new folder <span class="file">Desktop\Lab3</span>:</p>
 <ul>
 <li><span class="file">surveys_clean.csv</span></li>
 </ul>
 </li>
-<li><p>In RStudio, change the "working directory" to: <span class="file">Desktop\Lab4</span>. Click here if you need a <a href="https://diego-ibarra.github.io/biol3782/week1/index.html#RStudio%27s-%22Working-Directory%22">refresher on the <strong>working directory</strong></a></p>
+<li><p>In RStudio, change the "working directory" to: <span class="file">Desktop\Lab3</span>. Click here if you need a <a href="https://diego-ibarra.github.io/biol3782/week1/index.html#RStudio%27s-%22Working-Directory%22">refresher on the <strong>working directory</strong></a></p>
 </li>
-<li><p>In RStudio, create a new R script, name it <span class="file">my_plots.r</span> and make sure you save it in <span class="file">Desktop\Lab4</span>. You will be writting and copy-pasting code to your <span class="file">my_plots.r</span> file so that you can keep a record of all you did in this lab.</p>
+<li><p>In RStudio, create a new R script, name it <span class="file">my_plots.r</span> and make sure you save it in <span class="file">Desktop\Lab3</span>. You will be writting and copy-pasting code to your <span class="file">my_plots.r</span> file so that you can keep a record of all you did in this lab.</p>
 </li>
 </ul>
 <p>As in previous labs, we'll try simulate "real-life" coding, where:</p>
@@ -8094,9 +8093,10 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="RStudio's-spreadsheet-style-data-viewer">RStudio's spreadsheet-style data viewer<a class="anchor-link" href="#RStudio's-spreadsheet-style-data-viewer">¶</a></h3><p>Another way to look at your data is by displaying it in RStudio. You can do that by:</p>
 <ol>
-<li>Using the <code>view()</code> function (e.g. type <code>view(surveys)</code> on RStudio's <span class="console"></span> and click [enter])</li>
+<li>Using the <code>View()</code> function (e.g. type <code>View(surveys)</code> on RStudio's <span class="console"></span> and click [enter])</li>
 <li>Go to the Environment Panel and double click on the variable you want to view (e.g. <code>surveys</code>)</li>
 </ol>
+<p><span class="important"></span>  Note that the <code>View()</code> function has a CAPITAL "V"</p>
 </div>
 </div>
 </div>
@@ -32683,7 +32683,7 @@ RU5ErkJggg==" width="720"/>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="Q"><br/>
 <ol>
-<li><p>Replicate the plot above but with a different them that is NOT theme_bw() or theme_dark().<br/></p>
+<li><p>Do a plot similar to the one above but using with a different theme than the ones we used, that is, NOT theme_bw() or theme_dark().<br/></p>
 </li>
 <li><p>Make the plots title to be "Themed plot made by My_Name", where you replace"My_Name" with your own name<br/></p>
 </li>
