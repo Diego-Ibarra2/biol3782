@@ -85942,6 +85942,24 @@ Use the CRS of each raster object to answer the following questions in Brightspa
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="note"></div> Look at the Coordinate System Type (GEOGCRS vs. PROJCRS)
+
+<ul>
+<li><p>GEOGCRS: If the coordinate system block starts with GEOGCRS (Geographic Coordinate System), it means the data is mapped directly onto a 3D globe using latitude and longitude. The units will always be degrees (angular units).</p>
+</li>
+<li><p>PROJCRS: If it starts with PROJCRS (Projected Coordinate System), it means the 3D globe has been flattened onto a 2D surface (like a map). Projected systems almost always use meters (or sometimes feet) as their linear unit.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div class="Q"><br/><br/>
 <p>What projection does <b>DTM_HARV</b> use?</p>
 <p><br/><br/><div class="qhelp"></div></p></div>
@@ -85994,18 +86012,18 @@ Use the CRS of each raster object to answer the following questions in Brightspa
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Reproject-Rasters">Reproject Rasters<a class="anchor-link" href="#Reproject-Rasters">¶</a></h2><p>We can use the <code>projectRaster()</code> function to re-project a raster into a new CRS. Keep in mind that re-projection only works when you first have a defined CRS for the raster object that you want to re-project. It cannot be used if no CRS is defined.
+<h2 id="Reproject-Rasters">Reproject Rasters<a class="anchor-link" href="#Reproject-Rasters">¶</a></h2><p>We can use the <code>project()</code> function to re-project a raster into a new CRS. Keep in mind that re-projection only works when you first have a defined CRS for the raster object that you want to re-project. It cannot be used if no CRS is defined.
 <br/><br/>
 <span class="important"></span> When we re-project a raster, we move it from one “grid” to another. Thus, we are modifying the data! Keep this in mind as we work with raster data.
 <br/><br/></p>
-<p>To use the <code>projectRaster()</code> function, we need to define two things:</p>
+<p>To use the <code>project()</code> function, we need to define two things:</p>
 <ul>
 <li>the object we want to reproject and</li>
 <li>the CRS that we want to reproject it to.</li>
 </ul>
-<p>We want the CRS of our <code>hillshade</code> to match the <code>DTM_HARV</code> raster. We can thus assign the CRS of our <code>DTM_HARV</code> to our <code>hillshade</code> within the <code>projectRaster()</code> function as follows:</p>
+<p>We want the CRS of our <code>hillshade</code> to match the <code>DTM_HARV</code> raster. We can thus assign the CRS of our <code>DTM_HARV</code> to our <code>hillshade</code> within the <code>project()</code> function as follows:</p>
 <p>crs = crs(DTM_HARV)</p>
-<p><span class="note"></span> We are using the <code>projectRaster()</code> function on the raster object, not the <code>data.frame()</code> we use for plotting with ggplot.</p>
+<p><span class="note"></span> We are using the <code>project()</code> function on the raster object, not the <code>data.frame()</code> we use for plotting with ggplot.</p>
 <p>First we will reproject our <code>DTM_hill_HARV</code> raster data to match the <code>DTM_HARV</code> raster CRS.</p>
 <br/>
 <div class="use_editor"></div>
