@@ -7838,7 +7838,11 @@ a.anchor-link {
 <ul>
 <li>Create a <strong>folder</strong> on the "Desktop" and name it <span class="file">Lab7</span>.</li>
 <li>Create a sub folder called <span class="file">raw_data</span>.</li>
-<li>From Brightspace, download the <span class="file">NEON-DS-Airborne-Remote-Sensing.zip</span> .zip file, and extract (i.e. unzip or uncompress) its contents into your <span class="file">Desktop\Lab7\raw_data</span> folder. At the end your folder structure should look like this:</li>
+<li>From Brightspace, download the <span class="file">NEON-DS-Airborne-Remote-Sensing.zip</span> .zip file, and extract (i.e. unzip or uncompress) its contents into your <span class="file">Desktop\Lab7\raw_data</span> folder.</li>
+</ul>
+<p>If you are working on Posit Cloud, the code below can help you directly download the data into Posit.</p>
+<ul>
+<li>Either way, at the end your folder structure should look like this:</li>
 </ul>
 <br/>
 <pre><code>Desktop/
@@ -7887,6 +7891,41 @@ a.anchor-link {
 <br/>
 <p><span class="important"></span> Make sure you check your data, using both summaries (i.e. str(), dim()) and raw data, when you import/load it <strong>and</strong> after any manipulation.</p>
 <hr/>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="note"></div>
+<br/>The code below is to directly download data into Posit Cloud. Way faster than uploading a zip file to Posit. Note that this code should also work to download the data into you local computer, provided you execute it already in your working directory.
+
+<div class="use_console"></div>
+<br/>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-r"><pre><span></span><span class="c1"># Downloads DATA directly into your Posit Clout project</span>
+<span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"https://github.com/Diego-Ibarra2/biol3782/releases/download/lab7/raw_data.zip"</span>
+<span class="n">dest</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"NEON-DS-Airborne-Remote-Sensing.zip"</span>
+<span class="nf">dir.create</span><span class="p">(</span><span class="nf">dirname</span><span class="p">(</span><span class="n">dest</span><span class="p">),</span><span class="w"> </span><span class="n">recursive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">showWarnings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="nf">download.file</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">dest</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"wb"</span><span class="p">)</span><span class="w">   </span><span class="c1"># "wb" keeps binary files intact</span>
+<span class="nf">unzip</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
+<span class="nf">file.remove</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
